@@ -7,4 +7,5 @@ page = requests.get(url)
 bs = BeautifulSoup(page.content, 'html.parser')
 
 for offer in bs.find_all('li'):
-    print(offer)
+    result = offer.get_text()
+    print(result)
